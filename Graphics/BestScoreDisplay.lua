@@ -32,7 +32,7 @@ end
 local function Grade(score)
 	if not score then return "--" end
 	local grade = score.GetWifeGrade and score:GetWifeGrade() or score:GetGrade()
-	return ({Tier01="AAAA",Tier02="AAA",Tier03="AA",Tier04="A",Tier05="B",Tier06="C",Tier07="D",Failed="FAILED"})[tostring(grade):gsub("Grade_","")] or tostring(grade)
+	return GetGradeString(grade)
 end
 
 local t = Def.ActorFrame{
@@ -47,20 +47,29 @@ local t = Def.ActorFrame{
 	CurrentStepsChangedMessageCommand = function(self,p) self:playcommand("Update",p) end,
 }
 
-t[#t+1] = Def.Quad{ InitCommand=function(self) self:xy(5,5):zoomto(width,height):z(-1):diffuse(COLOR.MainHighlight) end }
-t[#t+1] = Def.Quad{ InitCommand=function(self) self:zoomto(width,height):diffuse(COLOR.MainBackground) end }
-t[#t+1] = UIElements.Border(width,height,1)..{ InitCommand=function(self) self:diffuse(COLOR.MainBorder) end }
+t[#t+1] = Def.Quad{ InitCommand=function(self) self:xy(5,5):zoomto(width,height):z(-10):diffuse(COLOR.MainHighlight) end }
+t[#t+1] = Def.Quad{ InitCommand=function(self) self:zoomto(width,height):z(0):diffuse(COLOR.MainBackground) end }
+t[#t+1] = UIElements.Border(width,height,1)..{ InitCommand=function(self) self:z(1):diffuse(COLOR.MainBorder) end }
 
 t[#t+1] = LoadFont("Common Normal")..{
 	InitCommand=function(self) self:xy(-width/2+18,-height/2+15):halign(0):zoom(.48):diffuse(Color.Black):settext("BEST SCORE") end
 }
 t[#t+1] = LoadFont("DFPGothic 64px")..{
 	InitCommand=function(self) self:xy(-width/2+22,2):halign(0.5):zoom(1.15) end,
-	UpdateCommand=function(self) local s=BestScore(Values.Song,Values.Steps); self:settext(Grade(s)); self:diffuse(s and GetRatingColor(s:GetWifeScore()*100) or COLOR.TextSub1) end
+	UpdateCommand=function(self)
+		local s = BestScore(Values.Song,Values.Steps)
+		local grade = s and (s.GetWifeGrade and s:GetWifeGrade() or s:GetGrade())
+		self:settext(Grade(s)):diffuse(s and GetGradeColor(grade) or COLOR.TextSub1)
+	end
 }
 t[#t+1] = LoadFont("Common Normal")..{
 	InitCommand=function(self) self:xy(-width/2+82,-5):halign(0):zoom(.7):diffuse(Color.Black) end,
-	UpdateCommand=function(self) local s=BestScore(Values.Song,Values.Steps); self:settext(s and string.format("%.2f%%",s:GetWifeScore()*100) or "--") end
+	UpdateCommand=function(self)
+		local s = BestScore(Values.Song, Values.Steps)
+		if not s then self:settext("--"); return end
+		local percent = s:GetWifeScore() * 100
+		self:settext(percent > 99.7 and string.format("%.4f%%", percent) or string.format("%.2f%%", percent))
+	end
 }
 t[#t+1] = LoadFont("Common Normal")..{
 	InitCommand=function(self) self:xy(-width/2+82,23):halign(0):zoom(.35):diffuse(Color.Black) end,
@@ -69,6 +78,15 @@ t[#t+1] = LoadFont("Common Normal")..{
 t[#t+1] = LoadFont("Common Normal")..{
 	InitCommand=function(self) self:xy(-width/2+82,41):halign(0):zoom(.4):diffuse(Color.Black) end,
 	UpdateCommand=function(self) local s=BestScore(Values.Song,Values.Steps); self:settext(s and string.format("MAX COMBO  %d",s:GetMaxCombo()) or "") end
+}
+t[#t+1] = LoadFont("Common Normal")..{
+	InitCommand=function(self) self:xy(width/2-18,-height/2+15):halign(1):zoom(.58) end,
+	UpdateCommand=function(self)
+		local s=BestScore(Values.Song,Values.Steps)
+		if not s then self:settext(""):diffuse(COLOR.TextSub1); return end
+		local clearType = getClearType(PLAYER, Values.Steps, s)
+		self:settext(getClearTypeShortText(clearType)):diffuse(getClearTypeColor(clearType))
+	end
 }
 t[#t+1] = LoadFont("Common Normal")..{
 	InitCommand=function(self) self:xy(width/2-18,48):halign(1):zoom(.32):diffuse(Color.Black) end,

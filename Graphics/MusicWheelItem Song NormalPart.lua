@@ -1,11 +1,33 @@
 local curFolder = ""
 local top
 
+local function WheelGradeColor(grade)
+	return GetGradeColor(grade)
+end
+
+local function MatchingSteps(song, selectedSteps)
+	if not song or not selectedSteps then return nil end
+	local wantedType = tostring(selectedSteps:GetStepsType())
+	local wantedDifficulty = tostring(selectedSteps:GetDifficulty())
+	local charts = song.GetAllSteps and song:GetAllSteps() or {}
+	for _, chart in ipairs(charts) do
+		if tostring(chart:GetStepsType()) == wantedType
+			and tostring(chart:GetDifficulty()) == wantedDifficulty then
+			return chart
+		end
+	end
+	return nil
+end
+
 local function GetSelectedDifficultyGrade(song, selectedSteps)
 	local steps = selectedSteps or GAMESTATE:GetCurrentSteps(PLAYER_1)
 	if not song or not steps then
 		return nil
 	end
+	-- Resolve only an exact chart match; never let a missing difficulty fall
+	-- back to another chart and inherit its grade.
+	steps = MatchingSteps(song, steps)
+	if not steps then return nil end
 
 	local ok, profile = pcall(function() return PROFILEMAN:GetProfile(PLAYER_1) end)
 	if not ok then profile = nil end
@@ -52,8 +74,7 @@ local function GetSelectedDifficultyGrade(song, selectedSteps)
 	end
 	if not best then return nil end
 	local grade = best.GetWifeGrade and best:GetWifeGrade() or best:GetGrade()
-	local names = {Tier01="AAAA",Tier02="AAA",Tier03="AA",Tier04="A",Tier05="B",Tier06="C",Tier07="D",Failed="FAILED",None="--"}
-	return names[tostring(grade):gsub("Grade_", "")] or tostring(grade)
+	return GetGradeString(grade), WheelGradeColor(grade)
 end
 local t =  Def.ActorFrame{
 	OnCommand = function(self)
@@ -186,17 +207,36 @@ t[#t+1] = LoadFont("Common Normal") .. {
 -- preferred over GAMESTATE so rapid chart changes cannot show a stale grade.
 t[#t+1] = LoadFont("DFPGothic 64px") .. {
 	InitCommand = function(self)
-		self:xy(470, 10):halign(1):zoom(0.42):visible(false)
+		self:xy(490, 5):halign(1):zoom(0.42):visible(false)
+	end,
+	OnCommand = function(self)
+		self:queuecommand("InitialGradeRefresh")
 	end,
 	SetMessageCommand = function(self, params)
 		local song = params.Song
 		local steps = params.Steps or GAMESTATE:GetCurrentSteps(PLAYER_1)
-		local current = GAMESTATE:GetCurrentSong()
-		local sameIndex = top and params.Index and tonumber(params.Index) == top:GetMusicWheel():GetCurrentIndex()
-		local sameSong = song and current and song.GetMusicPath and current.GetMusicPath
-			and song:GetMusicPath() == current:GetMusicPath()
-		local grade = (sameSong or sameIndex) and GetSelectedDifficultyGrade(song, steps) or nil
+		self.song = song
+		local grade, gradeColor = GetSelectedDifficultyGrade(song, steps)
 		self:settext(grade or "")
+		self:diffuse(gradeColor or COLOR.TextMain)
+		self:visible(grade ~= nil)
+	end,
+	CurrentStepsP1ChangedMessageCommand = function(self)
+		local grade, gradeColor = GetSelectedDifficultyGrade(self.song, GAMESTATE:GetCurrentSteps(PLAYER_1))
+		self:settext(grade or "")
+		self:diffuse(gradeColor or COLOR.TextMain)
+		self:visible(grade ~= nil)
+	end,
+	CurrentStepsChangedMessageCommand = function(self)
+		local grade, gradeColor = GetSelectedDifficultyGrade(self.song, GAMESTATE:GetCurrentSteps(PLAYER_1))
+		self:settext(grade or "")
+		self:diffuse(gradeColor or COLOR.TextMain)
+		self:visible(grade ~= nil)
+	end,
+	InitialGradeRefreshCommand = function(self)
+		local grade, gradeColor = GetSelectedDifficultyGrade(self.song, GAMESTATE:GetCurrentSteps(PLAYER_1))
+		self:settext(grade or "")
+		self:diffuse(gradeColor or COLOR.TextMain)
 		self:visible(grade ~= nil)
 	end
 }

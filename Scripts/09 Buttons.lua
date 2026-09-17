@@ -169,7 +169,7 @@ function Actor.GetButtonRoot(self, depth)
 	assert(depth >= 0, "Invalid Button Depth")
 	
 	local buttonRoot = self
-	for i=0, depth, 1 do
+	for i=1, depth, 1 do
 		buttonRoot = buttonRoot:GetParent()
 	end
 

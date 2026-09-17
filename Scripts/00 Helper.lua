@@ -1,6 +1,21 @@
 
 PLAYER = PLAYER_1
 
+-- Official Etterna Wife grade labels, shared by every grade display.
+GRADE_LABELS = {
+	Grade_Tier01 = "AAAAA", Grade_Tier02 = "AAAA:", Grade_Tier03 = "AAAA.", Grade_Tier04 = "AAAA",
+	Grade_Tier05 = "AAA:", Grade_Tier06 = "AAA.", Grade_Tier07 = "AAA",
+	Grade_Tier08 = "AA:", Grade_Tier09 = "AA.", Grade_Tier10 = "AA",
+	Grade_Tier11 = "A:", Grade_Tier12 = "A.", Grade_Tier13 = "A",
+	Grade_Tier14 = "B", Grade_Tier15 = "C", Grade_Tier16 = "D",
+	Grade_Failed = "F", Grade_None = "--",
+}
+
+function GetGradeString(grade)
+	if not grade then return "N/A" end
+	return GRADE_LABELS[tostring(grade)] or "CLEARED"
+end
+
 function Actor.PlayCommandsOnChildren(self, cmd, params)
     return self:RunCommandsOnChildren(function(self) self:playcommand(cmd, params) end)
 end

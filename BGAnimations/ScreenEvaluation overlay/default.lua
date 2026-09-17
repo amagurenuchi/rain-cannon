@@ -4,46 +4,9 @@ local song = nil
 local steps = nil
 local rate = 1.0
 
-local function GetGradeString(grade)
-	if not grade then return "N/A" end
-	local s = tostring(grade)
-	if s == "Grade_Tier01" then return "AAAA"
-	elseif s == "Grade_Tier02" then return "AAA"
-	elseif s == "Grade_Tier03" then return "AA"
-	elseif s == "Grade_Tier04" then return "A"
-	elseif s == "Grade_Tier05" then return "B"
-	elseif s == "Grade_Tier06" then return "C"
-	elseif s == "Grade_Tier07" then return "D"
-	elseif s == "Grade_Failed" then return "FAILED"
-	else
-		local tierStr = s:gsub("Grade_", "")
-		if tierStr:find("Tier") then
-			local num = tonumber(tierStr:gsub("Tier0?", ""))
-			if num == 1 then return "AAAA"
-			elseif num == 2 then return "AAA"
-			elseif num == 3 then return "AA"
-			elseif num == 4 then return "A"
-			elseif num == 5 then return "B"
-			elseif num == 6 then return "C"
-			elseif num == 7 then return "D"
-			end
-		end
-		return "CLEARED"
-	end
-end
-
-local function GetGradeColor(gradeStr)
-	if gradeStr == "AAAA" or gradeStr == "AAA" then
-		return COLOR.MainHighlight
-	elseif gradeStr == "AA" or gradeStr == "A" then
-		return color("#77CCFF")
-	elseif gradeStr == "B" or gradeStr == "C" then
-		return color("#55EE77")
-	elseif gradeStr == "D" then
-		return color("#FFAA44")
-	else
-		return color("#FF4444")
-	end
+local function GetEvaluationGrade(score)
+	if not score then return "Grade_None" end
+	return score.GetWifeGrade and score:GetWifeGrade() or score:GetGrade()
 end
 
 local function GetDifficultyName(diff)
@@ -253,12 +216,9 @@ t[#t+1] = Def.ActorFrame{
 			self:xy(0, -40):zoom(1.4)
 		end,
 		OnCommand = function(self)
-			local gradeStr = "AAA"
-			if pss then
-				gradeStr = GetGradeString(pss:GetGrade())
-			end
-			self:settext(gradeStr)
-			self:diffuse(GetGradeColor(gradeStr))
+			local grade = GetEvaluationGrade(pss)
+			self:settext(GetGradeString(grade))
+			self:diffuse(GetGradeColor(grade))
 		end
 	},
 
@@ -274,7 +234,8 @@ t[#t+1] = Def.ActorFrame{
 			elseif pss and pss.GetPercentScore then
 				wife = pss:GetPercentScore()
 			end
-			self:settextf("%.2f%%", wife * 100)
+			local percent = wife * 100
+			self:settextf(percent >= 99.7 and "%.4f%%" or "%.2f%%", percent)
 		end
 	},
 	LoadFont("Common Normal")..{
@@ -298,25 +259,15 @@ t[#t+1] = Def.ActorFrame{
 		end
 	},
 
-	-- Clear Status Badge
+	-- Clear Type Badge
 	LoadFont("Common Normal")..{
 		InitCommand = function(self)
 			self:xy(0, 142):zoom(0.5):diffuse(COLOR.MainHighlight)
 		end,
 		OnCommand = function(self)
-			local status = "CLEARED"
-			if pss then
-				if pss:FullComboOfScore('TapNoteScore_W1') then
-					status = "MARVELOUS FULL COMBO"
-				elseif pss:FullComboOfScore('TapNoteScore_W2') then
-					status = "PERFECT FULL COMBO"
-				elseif pss:FullComboOfScore('TapNoteScore_W3') then
-					status = "FULL COMBO"
-				elseif GetGradeString(pss:GetGrade()) == "FAILED" then
-					status = "FAILED"
-				end
-			end
-			self:settext("★  " .. status .. "  ★")
+			local clearType = getClearType(PLAYER, steps, pss)
+			local status = getClearTypeText(clearType)
+			self:settext(status):diffuse(getClearTypeColor(clearType))
 		end
 	}
 }
