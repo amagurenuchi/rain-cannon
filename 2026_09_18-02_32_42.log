@@ -1,0 +1,487 @@
+﻿[2026-09-18 02:32:42][INFO]: Etterna v0.75.1 - Build v0.75.1-0-g2d70614-dirty
+[2026-09-18 02:32:42][INFO]: System: Windows 10.0 Professional (Build #26200)
+[2026-09-18 02:32:42][INFO]: CPU: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz
+[2026-09-18 02:32:42][INFO]: System Architecture: x64
+[2026-09-18 02:32:42][INFO]: Total Memory: 15.625GB
+[2026-09-18 02:32:42][WARN]: Reading 'Data/Defaults.ini' failed: No such file or directory
+[2026-09-18 02:32:42][WARN]: Reading 'Data/Static.ini' failed: No such file or directory
+[2026-09-18 02:32:42][WARN]: Reading 'Data/Static.ini' failed: No such file or directory
+[2026-09-18 02:32:42][WARN]: Reading 'Data/Defaults.ini' failed: No such file or directory
+[2026-09-18 02:32:42][WARN]: Reading 'Data/Static.ini' failed: No such file or directory
+[2026-09-18 02:32:42][WARN]: Reading 'Data/Static.ini' failed: No such file or directory
+[2026-09-18 02:32:42][INFO]: Crash dumps WILL be uploaded if the game crashes.
+[2026-09-18 02:32:42][INFO]: Logging level 2 (0 - TRACE | 5 - FATAL)
+[2026-09-18 02:32:42][WARN]: Initializing Discord client
+[2026-09-18 02:32:42][INFO]: Updating Discord Rich Presence (Menu)
+[2026-09-18 02:32:42][WARN]: [2026-09-18 02:32:42.284] [8924] (rpc_manager.cpp:130): RPC manager reset: RPC failed to receive READY payload
+
+[2026-09-18 02:32:42][WARN]: Discord RPC failed to set - 
+[2026-09-18 02:32:42][INFO]: Loading window: win32
+[2026-09-18 02:32:42][INFO]: ThemeManager::SwitchThemeAndLanguage: "rain-cannon", "en"
+[2026-09-18 02:32:42][INFO]: Theme: rain-cannon
+[2026-09-18 02:32:42][INFO]: Language: en
+[2026-09-18 02:32:42][INFO]: Loading "/Scripts/32log.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Scripts/extend_table.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Scripts/32log.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Scripts/extend_table.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/00 compat.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/00 init.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/00 Utility.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/01 alias.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/01 base.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/01 Functional.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/01 IniFile.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 Actor.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 ActorDef.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 Branches.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 Colors.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 Debug.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 Enum.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 OptionsMenu.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 Other.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 Serialize.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 Sprite.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 StageMods.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 ThemePrefs.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 ThemePrefsRows.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/02 Utilities.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/03 CustomSpeedMods.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/03 DisplaySpecs.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/03 Gameplay.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/03 GamePreferences.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/03 UserPreferences2.lua" ...
+[2026-09-18 02:32:42][WARN]: Reading 'Themes/_fallback/ThemeInfo.ini' failed: No such file or directory
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/04 LogDisplay.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/04 NumPadEntry.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/04 SetBGFitHelpers.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/09 PackList.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/09 SimNSkinPreview.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/10 AudioVisualizer.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/10 FileUtils.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/10 Scores.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/10 settings_system.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/10 Texts.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/10 WifeSundries.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/11 AssetsConfig.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/12 AssetsUtils.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/72 custom_windows_config.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/96 Tooltip.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/97 UIElements.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/98 util.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/99 util.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/999 calcdebugutil.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/_fallback/Scripts/find_missing_lang_strings.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/rain-cannon/Scripts/00 Helper.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/rain-cannon/Scripts/02 Colors.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/rain-cannon/Scripts/02 TextBanner.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/rain-cannon/Scripts/09 Buttons.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/rain-cannon/Scripts/09 ToolTip.lua" ...
+[2026-09-18 02:32:42][INFO]: Loading "/Themes/rain-cannon/Scripts/10 UI Elements.lua" ...
+[2026-09-18 02:32:43][INFO]: WaveOut software mixing at 44100hz
+[2026-09-18 02:32:43][INFO]: Starting thread: Decode thread
+[2026-09-18 02:32:43][INFO]: Starting thread: Mixer thread
+[2026-09-18 02:32:43][INFO]: Sound driver: WaveOut
+[2026-09-18 02:32:43][INFO]: Starting thread: Music thread
+[2026-09-18 02:32:43][INFO]: ThemeManager::SwitchThemeAndLanguage: "rain-cannon", "en"
+[2026-09-18 02:32:43][INFO]: Beginning InitSongsFromDisk
+[2026-09-18 02:32:43][INFO]: Beginning LoadCache
+[2026-09-18 02:32:43][INFO]: LoadCache Started 4 Threads
+[2026-09-18 02:32:43][INFO]: LoadCache Thread 3 Finished
+[2026-09-18 02:32:43][INFO]: LoadCache Thread 2 Finished
+[2026-09-18 02:32:43][INFO]: LoadCache Thread 1 Finished
+[2026-09-18 02:32:43][INFO]: LoadCache Thread 0 Finished
+[2026-09-18 02:32:43][INFO]: Finished LoadCache
+[2026-09-18 02:32:43][INFO]: InitSongsFromDisk Starting 4 Threads
+[2026-09-18 02:32:44][INFO]: InitSongsFromDisk Threads Finished
+[2026-09-18 02:32:44][INFO]: LoadStepmaniaSongDir Starting: Songs/
+[2026-09-18 02:32:44][WARN]: Creating Ungrouped Songs group with 1 songs... This means you may have a Song folder that isn't inside a pack.
+[2026-09-18 02:32:44][WARN]: [2026-09-18 02:32:44.285] [8924] (rpc_manager.cpp:39): RPC Connect error: -4058
+
+[2026-09-18 02:32:44][WARN]: [2026-09-18 02:32:44.285] [8924] (rpc_manager.cpp:130): RPC manager reset: RPC failed to receive READY payload
+
+[2026-09-18 02:32:44][INFO]: LoadStepmaniaSongDir Starting 4 Threads for Dir Songs/
+[2026-09-18 02:32:44][INFO]: Song /Songs/DumpAss Dude's Dream/Zzz old pack bn/ has no SSC, SM, SMA, DWI, BMS, KSF, or OSU files - ignoring
+[2026-09-18 02:32:44][INFO]: Song /Songs/Nuclear Blast JS Awesome Bomb Filez 4/Petit Pr�lude P�rim� (Xayphon)/ has no SSC, SM, SMA, DWI, BMS, KSF, or OSU files - ignoring
+[2026-09-18 02:32:44][INFO]: Song /Songs/Mainebow Maps/-lirile- (Mainebow)/ has no SSC, SM, SMA, DWI, BMS, KSF, or OSU files - ignoring
+[2026-09-18 02:32:44][INFO]: Song /Songs/Fullerene Shift/_Song List/ has no SSC, SM, SMA, DWI, BMS, KSF, or OSU files - ignoring
+[2026-09-18 02:32:44][INFO]: Song /Songs/Jumpstream Of Fighters Vol. 1/_songlist/ has no SSC, SM, SMA, DWI, BMS, KSF, or OSU files - ignoring
+[2026-09-18 02:32:44][INFO]: Song /Songs/Nuclear Blast JS Awesome Bomb Filez/ZZZ SSFFRC/ has no SSC, SM, SMA, DWI, BMS, KSF, or OSU files - ignoring
+[2026-09-18 02:32:44][INFO]: Song /Songs/Jumpstream Of Fighters Vol. 2/_extras/ has no SSC, SM, SMA, DWI, BMS, KSF, or OSU files - ignoring
+[2026-09-18 02:32:44][INFO]: Loaded 1 songs from "Songs/Unknown Group"
+[2026-09-18 02:32:44][INFO]: LoadStepmaniaSongDir Finished: Songs/
+[2026-09-18 02:32:44][INFO]: LoadStepmaniaSongDir Starting: /AdditionalSongs/
+[2026-09-18 02:32:44][INFO]: LoadStepmaniaSongDir Finished: /AdditionalSongs/
+[2026-09-18 02:32:44][INFO]: InitSongsFromDisk Found 1723 songs in 1.944613 seconds
+[2026-09-18 02:32:44][INFO]: Loading the Calc Test node.
+[2026-09-18 02:32:45][INFO]: Loading /Save/LocalProfiles/00000000/Etterna.xml
+[2026-09-18 02:32:45][INFO]: Done loading from file
+[2026-09-18 02:32:45][INFO]: Attempting to connect to: multi.etternaonline.com, Port: 8765
+[2026-09-18 02:32:46][INFO]: Connected to ett server: multi.etternaonline.com
+[2026-09-18 02:32:46][INFO]: Server Version: 0 
+[2026-09-18 02:32:46][INFO]: Last seen video driver: Intel(R) UHD Graphics
+[2026-09-18 02:32:46][WARN]: Video renderer list has been changed from 'd3d, opengl' to 'd3d'
+[2026-09-18 02:32:46][INFO]: Video renderers: 'd3d'
+[2026-09-18 02:32:46][INFO]: RageDisplay_D3D::RageDisplay_D3D()
+[2026-09-18 02:32:46][INFO]: Current renderer: Direct3D
+[2026-09-18 02:32:46][INFO]: Driver: igdumdim64.dll
+Description: Intel(R) UHD Graphics
+Max texture size: 8192
+Alpha in palette: no
+
+[2026-09-18 02:32:46][INFO]: This display adaptor supports the following modes:
+[2026-09-18 02:32:46][INFO]:   1920x1080 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1920x1080 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1920x1080 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1920x540 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1920x540 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1920x540 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   800x600 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   800x600 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   800x600 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   640x480 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   640x480 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   640x480 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x1024 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x1024 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x1024 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1024x768 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1024x768 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1024x768 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1680x1050 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1680x1050 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1680x1050 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x960 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x960 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x960 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x720 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x720 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x720 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   720x480 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   720x480 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   720x480 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1440x480 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1440x480 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1440x480 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1440x576 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1440x576 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1440x576 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   720x576 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   720x576 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   720x576 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1152x864 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1152x864 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1152x864 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x600 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x600 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x600 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x768 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x768 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x768 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x800 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x800 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1280x800 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1360x768 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1360x768 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1360x768 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1366x768 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1366x768 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1366x768 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1400x1050 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1400x1050 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1400x1050 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1440x900 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1440x900 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1440x900 59Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1600x900 75Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1600x900 60Hz, format 22
+[2026-09-18 02:32:46][INFO]:   1600x900 59Hz, format 22
+[2026-09-18 02:32:46][WARN]: RageDisplay_D3D::TryVideoMode( 1, 1600, 900, 32, 0, 0 )
+[2026-09-18 02:32:46][INFO]: Present Parameters: 1600, 900, 22, 1, 0, 1, 0x1e069c, 1, 1, 80, 0, 0, 2147483648
+[2026-09-18 02:32:46][INFO]: D3D Windowed 1600x900 32 color 32 texture 75Hz NoVsync NoSmoothLines
+[2026-09-18 02:32:46][INFO]: RageInput::RageInput()
+[2026-09-18 02:32:46][INFO]: DInput: Enumerating device - Type: 0x413 Instance Name: "Keyboard" Product Name: "Keyboard"
+[2026-09-18 02:32:46][INFO]: DInput: Enumerating device - Type: 0x10318 Instance Name: "vJoy Device" Product Name: "vJoy Device"
+[2026-09-18 02:32:46][INFO]: DInput: Enumerating device - Type: 0x112 Instance Name: "Mouse" Product Name: "Mouse"
+[2026-09-18 02:32:46][INFO]: Opening DIDevice 'Keyboard'
+[2026-09-18 02:32:46][INFO]: Opening DIDevice 'vJoy Device'
+[2026-09-18 02:32:46][INFO]: Opening DIDevice 'Mouse'
+[2026-09-18 02:32:46][INFO]: Found 3 DirectInput devices:
+[2026-09-18 02:32:46][INFO]:    0: 'Keyboard' axes: 0, hats: 0, buttons: 256 (buffered)
+[2026-09-18 02:32:46][INFO]:    1: 'vJoy Device' axes: 6, hats: 0, buttons: 8 (buffered)
+[2026-09-18 02:32:46][INFO]:    2: 'Mouse' axes: 3, hats: 0, buttons: 8 (buffered)
+[2026-09-18 02:32:46][INFO]: Starting thread: DirectInput thread
+[2026-09-18 02:32:46][INFO]: ScreenManager::ThemeChanged
+[2026-09-18 02:32:46][INFO]: Loading screen: "ScreenSystemLayer"
+[2026-09-18 02:32:48][WARN]: [2026-09-18 02:32:48.286] [8924] (rpc_manager.cpp:39): RPC Connect error: -4058
+
+[2026-09-18 02:32:48][WARN]: [2026-09-18 02:32:48.286] [8924] (rpc_manager.cpp:130): RPC manager reset: RPC failed to receive READY payload
+
+[2026-09-18 02:32:48][INFO]: Loaded "ScreenSystemLayer" ("ScreenSystemLayer") in 1.9952606
+[2026-09-18 02:32:48][INFO]: Loading screen: "ScreenSyncOverlay"
+[2026-09-18 02:32:48][INFO]: Loaded "ScreenSyncOverlay" ("ScreenSyncOverlay") in 0.0028181
+[2026-09-18 02:32:48][INFO]: Loading screen: "ScreenStatsOverlay"
+[2026-09-18 02:32:48][INFO]: Loaded "ScreenStatsOverlay" ("ScreenStatsOverlay") in 0.001357
+[2026-09-18 02:32:48][INFO]: Loading screen: "ScreenDebugOverlay"
+[2026-09-18 02:32:48][INFO]: Loaded "ScreenDebugOverlay" ("ScreenDebugOverlay") in 0.0074988
+[2026-09-18 02:32:48][INFO]: Loading screen: "ScreenInstallOverlay"
+[2026-09-18 02:32:48][INFO]: Loaded "ScreenInstallOverlay" ("ScreenInstallOverlay") in 0.0007361
+[2026-09-18 02:32:48][INFO]: Loading screen: "ScreenChatOverlay"
+[2026-09-18 02:32:48][INFO]: Loaded "ScreenChatOverlay" ("ScreenWithMenuElementsBasic") in 0.0100927
+[2026-09-18 02:32:48][INFO]: Loading screen: "ScreenToolTipOverlay"
+[2026-09-18 02:32:48][INFO]: Loaded "ScreenToolTipOverlay" ("ScreenWithMenuElements") in 0.0039434
+[2026-09-18 02:32:48][INFO]: Loading screen: "ScreenInit"
+[2026-09-18 02:32:52][INFO]: Loaded "ScreenInit" ("ScreenWithMenuElements") in 3.9313667
+[2026-09-18 02:32:52][INFO]: PushLoadedScreen: "ScreenInit"
+[2026-09-18 02:32:52][INFO]: Updating Discord Rich Presence (Menu)
+[2026-09-18 02:32:52][INFO]: Ettp server identified: AltEOMulti (Version: 5)
+[2026-09-18 02:32:52][INFO]: Connection to 'AltEOMulti' successful.
+[2026-09-18 02:32:52][INFO]: RefreshLastVersion beginning to determine latest game version according to API
+[2026-09-18 02:32:52][INFO]: Refreshing Pack Tags
+[2026-09-18 02:32:52][INFO]: Generating GetPackTagsRequest
+[2026-09-18 02:32:52][INFO]: Loaded external keyboard layout 00000409
+[2026-09-18 02:32:52][WARN]: Discord RPC failed to set - 
+[2026-09-18 02:32:53][INFO]: RefreshLastVersion successful - Last Version is 0.75
+[2026-09-18 02:32:53][INFO]: Loaded tagType noteskin_tag with 11 tags
+[2026-09-18 02:32:53][INFO]: Loaded tagType pack_tag with 9 tags
+[2026-09-18 02:32:53][INFO]: Loaded tagType global_keyCount with 7 tags
+[2026-09-18 02:32:53][INFO]: Loaded tagType global_skillset with 8 tags
+[2026-09-18 02:32:53][INFO]: Loaded tagType judgement_tag with 5 tags
+[2026-09-18 02:32:53][INFO]: Loaded tagType noteskin_type with 5 tags
+[2026-09-18 02:32:53][INFO]: Loaded tagType toastie_type with 1 tags
+[2026-09-18 02:32:53][INFO]: Loaded tagType toastie_tag with 1 tags
+[2026-09-18 02:32:53][INFO]: Loaded tagType pack_bundle with 5 tags
+[2026-09-18 02:32:53][INFO]: Caching packs for tag 'beginner'
+[2026-09-18 02:32:53][INFO]: Generating MultiSearchRequest for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['beginner'])
+[2026-09-18 02:32:53][INFO]: Finished creating MultiSearch request for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['beginner'])
+[2026-09-18 02:32:53][INFO]: Caching packs for tag 'novice'
+[2026-09-18 02:32:53][INFO]: Generating MultiSearchRequest for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['novice'])
+[2026-09-18 02:32:53][INFO]: Finished creating MultiSearch request for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['novice'])
+[2026-09-18 02:32:53][INFO]: Caching packs for tag 'intermediate'
+[2026-09-18 02:32:53][INFO]: Generating MultiSearchRequest for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['intermediate'])
+[2026-09-18 02:32:53][INFO]: Finished creating MultiSearch request for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['intermediate'])
+[2026-09-18 02:32:53][INFO]: Caching packs for tag 'advanced'
+[2026-09-18 02:32:53][INFO]: Generating MultiSearchRequest for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['advanced'])
+[2026-09-18 02:32:53][INFO]: Finished creating MultiSearch request for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['advanced'])
+[2026-09-18 02:32:53][INFO]: Caching packs for tag 'expert'
+[2026-09-18 02:32:53][INFO]: Generating MultiSearchRequest for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['expert'])
+[2026-09-18 02:32:53][INFO]: Finished creating MultiSearch request for (ApiSearchCriteria page: 0, per_page: 100, tags (matchAny=true): ['expert'])
+[2026-09-18 02:32:54][INFO]: For tag 'novice', cached pack 1 (id 3455): Dark Chanchellors Pack
+[2026-09-18 02:32:54][INFO]: For tag 'novice', cached pack 2 (id 3569): FFR Partyy Pack Vol. 1
+[2026-09-18 02:32:54][INFO]: For tag 'novice', cached pack 3 (id 3712): Keyboard Collaboration II
+[2026-09-18 02:32:54][INFO]: For tag 'novice', cached pack 4 (id 3711): Keyboard Collaboration III
+[2026-09-18 02:32:54][INFO]: For tag 'novice', cached pack 5 (id 3768): Light Chancellors Pack 3
+[2026-09-18 02:32:54][INFO]: For tag 'novice', cached pack 6 (id 3938): Oxicleaned
+[2026-09-18 02:32:54][INFO]: For tag 'novice', cached pack 7 (id 4212): Stepping Stones 4
+[2026-09-18 02:32:54][INFO]: For tag 'novice', cached pack 8 (id 4330): VGMP 4
+[2026-09-18 02:32:54][INFO]: For tag 'novice', cached pack 9 (id 4368): Xoon 5 -The Transition-
+[2026-09-18 02:32:54][INFO]: For tag 'novice', finished caching packs - 9 total
+[2026-09-18 02:32:54][INFO]: For tag 'expert', cached pack 1 (id 4614): April Singles
+[2026-09-18 02:32:54][INFO]: For tag 'expert', cached pack 2 (id 3431): cesspool of ribal 4
+[2026-09-18 02:32:54][INFO]: For tag 'expert', cached pack 3 (id 3479): Denpack Append
+[2026-09-18 02:32:54][INFO]: For tag 'expert', cached pack 4 (id 3486): DumpAss Dude's Dream
+[2026-09-18 02:32:54][INFO]: For tag 'expert', cached pack 5 (id 3589): Fullerene Shift
+[2026-09-18 02:32:54][INFO]: For tag 'expert', cached pack 6 (id 3827): Mina Minimegapack 6 (daunrealonez)
+[2026-09-18 02:32:54][INFO]: For tag 'expert', cached pack 7 (id 3814): Miracle Streamz^2
+[2026-09-18 02:32:54][INFO]: For tag 'expert', cached pack 8 (id 5000): World of Corruption
+[2026-09-18 02:32:54][INFO]: For tag 'expert', finished caching packs - 8 total
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 1 (id 3334): Autotelic Jacks
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 2 (id 3403): Bursts Of A Teitoku Kai
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 3 (id 4473): Jumpstream Of Fighters Vol. 1
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 4 (id 3735): Jumpstream Of Fighters Vol. 2
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 5 (id 3756): Lofty Minipack 4 (Paradise Loft)
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 6 (id 3819): Minty Fresh Pack 3
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 7 (id 3873): Nuclear Kimchi Chordjack Pack
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 8 (id 4074): Skwid's Minipack 8 (Ok Here It Is Edition)
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 9 (id 4073): Skwid's Minipack 9 (Anchor Edition)
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 10 (id 4240): Treatpack 1
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 11 (id 4295): Valedumps 2
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', cached pack 12 (id 5000): World of Corruption
+[2026-09-18 02:32:54][INFO]: For tag 'advanced', finished caching packs - 12 total
+[2026-09-18 02:32:54][INFO]: For tag 'beginner', cached pack 1 (id 4822): ISAAC's Casualties of Rhythm 4
+[2026-09-18 02:32:54][INFO]: For tag 'beginner', cached pack 2 (id 3928): Otaku's Dream 10th Anime Mix
+[2026-09-18 02:32:54][INFO]: For tag 'beginner', cached pack 3 (id 3929): Otaku's Dream 9th Anime Mix
+[2026-09-18 02:32:54][INFO]: For tag 'beginner', cached pack 4 (id 3975): Piece of Cake 8
+[2026-09-18 02:32:54][INFO]: For tag 'beginner', cached pack 5 (id 4197): Super Meat Boy! Full-Keyboard Stepmania Pack
+[2026-09-18 02:32:54][INFO]: For tag 'beginner', cached pack 6 (id 4314): Vocaloid Collaboration 12
+[2026-09-18 02:32:54][INFO]: For tag 'beginner', cached pack 7 (id 4313): Vocaloid Collaboration 13
+[2026-09-18 02:32:54][INFO]: For tag 'beginner', finished caching packs - 7 total
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 1 (id 3302): Acerola
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 2 (id 3417): Chordial Blitz
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 3 (id 3553): Fennec Fantasy
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 4 (id 3637): hi19hi19 Pack 3 - Popcorn Blast JS Buttery Snack Filez
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 5 (id 3636): hi19hi19 Pack 4 - Modern Keyboardsmash
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 6 (id 3635): hi19hi19 Pack 5 - Streams and Memes
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 7 (id 3779): LEINISM
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 8 (id 3874): Nuclear Blast JS Awesome Bomb Filez 5
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 9 (id 3868): ODIPack3
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 10 (id 5000): World of Corruption
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 11 (id 4352): Yolomania Vol. 3
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', cached pack 12 (id 4351): Yolomania Vol. 4
+[2026-09-18 02:32:54][INFO]: For tag 'intermediate', finished caching packs - 12 total
+[2026-09-18 02:32:54][INFO]: Loading screen: "ScreenTitleMenu"
+[2026-09-18 02:32:55][INFO]: Loaded "ScreenTitleMenu" ("ScreenTitleMenu") in 0.1451968
+[2026-09-18 02:32:55][INFO]: PushLoadedScreen: "ScreenTitleMenu"
+[2026-09-18 02:32:55][INFO]: Updating Discord Rich Presence (Menu)
+[2026-09-18 02:32:55][WARN]: Discord RPC failed to set - 
+[2026-09-18 02:32:56][WARN]: [2026-09-18 02:32:56.286] [8924] (rpc_manager.cpp:39): RPC Connect error: -4058
+
+[2026-09-18 02:32:56][WARN]: [2026-09-18 02:32:56.286] [8924] (rpc_manager.cpp:130): RPC manager reset: RPC failed to receive READY payload
+
+[2026-09-18 02:32:56][INFO]: Tried to queue PlayOnceFromDir: ''
+[2026-09-18 02:32:56][INFO]: Loading screen: "ScreenOptionsService"
+[2026-09-18 02:32:56][INFO]: Loaded "ScreenOptionsService" ("ScreenOptionsMaster") in 0.104480706
+[2026-09-18 02:32:56][INFO]: PushLoadedScreen: "ScreenOptionsService"
+[2026-09-18 02:32:56][INFO]: Updating Discord Rich Presence (Menu)
+[2026-09-18 02:32:56][WARN]: Discord RPC failed to set - 
+[2026-09-18 02:32:58][INFO]: Loading screen: "ScreenSelectGame"
+[2026-09-18 02:32:58][WARN]: Metric "ScreenSelectGame::NumRowsShown" is missing.
+[2026-09-18 02:32:58][INFO]: Dialog: "Metric "ScreenSelectGame::NumRowsShown" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:32:59][WARN]: Metric ScreenSelectGame::NumRowsShown could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:32:59][WARN]: Metric "ScreenSelectGame::RowInitCommand" is missing.
+[2026-09-18 02:32:59][INFO]: Dialog: "Metric "ScreenSelectGame::RowInitCommand" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:32:59][WARN]: Metric ScreenSelectGame::RowInitCommand could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:32:59][WARN]: Metric "ScreenSelectGame::RowOnCommand" is missing.
+[2026-09-18 02:32:59][INFO]: Dialog: "Metric "ScreenSelectGame::RowOnCommand" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:32:59][WARN]: Metric ScreenSelectGame::RowOnCommand could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:32:59][WARN]: Metric "ScreenSelectGame::RowOffCommand" is missing.
+[2026-09-18 02:32:59][INFO]: Dialog: "Metric "ScreenSelectGame::RowOffCommand" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:32:59][WARN]: Metric ScreenSelectGame::RowOffCommand could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:32:59][WARN]: Metric "ScreenSelectGame::ShowScrollBar" is missing.
+[2026-09-18 02:32:59][INFO]: Dialog: "Metric "ScreenSelectGame::ShowScrollBar" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:32:59][WARN]: Metric ScreenSelectGame::ShowScrollBar could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:32:59][WARN]: Metric "ScreenSelectGame::ScrollBarHeight" is missing.
+[2026-09-18 02:32:59][INFO]: Dialog: "Metric "ScreenSelectGame::ScrollBarHeight" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:32:59][WARN]: Metric ScreenSelectGame::ScrollBarHeight could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:32:59][WARN]: Metric "ScreenSelectGame::ScrollBarTime" is missing.
+[2026-09-18 02:32:59][INFO]: Dialog: "Metric "ScreenSelectGame::ScrollBarTime" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:32:59][WARN]: Metric ScreenSelectGame::ScrollBarTime could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:32:59][WARN]: Metric "ScreenSelectGame::LineHighlightX" is missing.
+[2026-09-18 02:32:59][INFO]: Dialog: "Metric "ScreenSelectGame::LineHighlightX" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:32:59][WARN]: Metric ScreenSelectGame::LineHighlightX could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:32:59][WARN]: Metric "ScreenSelectGame::ShowExitRow" is missing.
+[2026-09-18 02:32:59][INFO]: Dialog: "Metric "ScreenSelectGame::ShowExitRow" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:32:59][WARN]: Metric ScreenSelectGame::ShowExitRow could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:32:59][WARN]: Metric "ScreenSelectGame::SeparateExitRow" is missing.
+[2026-09-18 02:32:59][INFO]: Dialog: "Metric "ScreenSelectGame::SeparateExitRow" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::SeparateExitRow could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::SeparateExitRowY" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::SeparateExitRowY" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::SeparateExitRowY could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::ShowExplanations" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::ShowExplanations" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::ShowExplanations could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::AllowRepeatingChangeValueInput" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::AllowRepeatingChangeValueInput" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::AllowRepeatingChangeValueInput could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::CursorTweenSeconds" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::CursorTweenSeconds" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::CursorTweenSeconds could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::WrapValueInRow" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::WrapValueInRow" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::WrapValueInRow could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::OptionRowNormalMetricsGroup" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::OptionRowNormalMetricsGroup" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::OptionRowNormalMetricsGroup could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::OptionRowExitMetricsGroup" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::OptionRowExitMetricsGroup" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::OptionRowExitMetricsGroup could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::RowPositionTransformFunction" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::RowPositionTransformFunction" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::RowPositionTransformFunction could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Ignoring invalid transform function.
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Sounds/ScreenSelectGame change" is missing." [MissingThemeElement]
+[2026-09-18 02:33:00][WARN]: Theme element Sounds/ScreenSelectGame change could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Sounds/ScreenSelectGame next" is missing." [MissingThemeElement]
+[2026-09-18 02:33:00][WARN]: Theme element Sounds/ScreenSelectGame next could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Sounds/ScreenSelectGame prev" is missing." [MissingThemeElement]
+[2026-09-18 02:33:00][WARN]: Theme element Sounds/ScreenSelectGame prev could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Sounds/ScreenSelectGame toggle on" is missing." [MissingThemeElement]
+[2026-09-18 02:33:00][WARN]: Theme element Sounds/ScreenSelectGame toggle on could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Sounds/ScreenSelectGame toggle off" is missing." [MissingThemeElement]
+[2026-09-18 02:33:00][WARN]: Theme element Sounds/ScreenSelectGame toggle off could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Sounds/ScreenSelectGame start" is missing." [MissingThemeElement]
+[2026-09-18 02:33:00][WARN]: Theme element Sounds/ScreenSelectGame start could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Graphics/ScreenSelectGame page" is missing." [MissingThemeElement]
+[2026-09-18 02:33:00][WARN]: Theme element Graphics/ScreenSelectGame page could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::PageX" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::PageX" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::PageX could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][WARN]: Metric "ScreenSelectGame::PageY" is missing.
+[2026-09-18 02:33:00][INFO]: Dialog: "Metric "ScreenSelectGame::PageY" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:00][WARN]: Metric ScreenSelectGame::PageY could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Graphics/ScreenSelectGame LineHighlight P1" is missing." [MissingThemeElement]
+[2026-09-18 02:33:00][WARN]: Theme element Graphics/ScreenSelectGame LineHighlight P1 could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Fonts/ScreenSelectGame explanation" is missing." [MissingThemeElement]
+[2026-09-18 02:33:00][WARN]: Theme element Fonts/ScreenSelectGame explanation could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:00][INFO]: Dialog: "The theme element "Graphics/ScreenSelectGame more" is missing." [MissingThemeElement]
+[2026-09-18 02:33:01][WARN]: Theme element Graphics/ScreenSelectGame more could not be found in "Themes/rain-cannon/" or "Themes/_fallback/".
+[2026-09-18 02:33:01][WARN]: Metric "ScreenSelectGame::MoreX" is missing.
+[2026-09-18 02:33:01][INFO]: Dialog: "Metric "ScreenSelectGame::MoreX" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:01][WARN]: Metric ScreenSelectGame::MoreX could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:01][WARN]: Metric "ScreenSelectGame::MoreY" is missing.
+[2026-09-18 02:33:01][INFO]: Dialog: "Metric "ScreenSelectGame::MoreY" is missing.
+Correct this and click Retry, click Abort to crash, or click Ignore to attempt to continue." []
+[2026-09-18 02:33:01][WARN]: Metric ScreenSelectGame::MoreY could not be found in "Themes/rain-cannon/metrics.ini" or "Themes/_fallback/metrics.ini".
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][WARN]: PushMetric:  Attempted to fetch metric with empty group name or empty value name.
+[2026-09-18 02:33:01][INFO]: Loaded "ScreenSelectGame" ("ScreenOptionsMaster") in 3.8162677
+[2026-09-18 02:33:01][INFO]: PushLoadedScreen: "ScreenSelectGame"
+[2026-09-18 02:33:01][FATAL]: <type class ScreenOptionsMaster> ScreenSelectGame/<type class ActorFrame> Container is missing an OnCommand.
+[2026-09-18 02:33:01][INFO]: Loaded external keyboard layout 00000409
