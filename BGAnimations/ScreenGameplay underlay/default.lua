@@ -8,6 +8,10 @@ t[#t+1] = Def.Quad{
 	end
 }
 
-t[#t+1] = LoadActor("../_songbg.lua")
+t[#t+1] = LoadActor("../_songbg.lua") .. {
+	InitCommand = function(self)
+		self:SetUpdateFunction(nil)
+	end,
+}
 
 return t

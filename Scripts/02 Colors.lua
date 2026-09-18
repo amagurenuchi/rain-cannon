@@ -94,6 +94,33 @@ function GetRatingColor(rating)
 	return HSV(((198 - math.floor(rating,40)*(324/40))%360), 0.5, 0.75)
 end
 
+function GetSongMSDColor(song)
+	if not song or not song.GetAllSteps then return color("#4C4C4C") end
+	local rate = 1
+	local options = GAMESTATE:GetSongOptionsObject('ModsLevel_Current')
+	if options and options.MusicRate then rate = options:MusicRate() end
+	local total, count = 0, 0
+	for _, steps in ipairs(song:GetAllSteps() or {}) do
+		if steps and steps.GetMSD then
+			local msd = steps:GetMSD(rate, 1)
+			if msd and msd == msd and msd >= 0 then
+				total = total + msd
+				count = count + 1
+			end
+		end
+	end
+	return count > 0 and GetRatingColor(total / count) or color("#4C4C4C")
+end
+
+function ApplyRawMSDColor(actor, song)
+	if not actor then return end
+	local c = GetSongMSDColor(song)
+	actor:diffuse(c):diffusetopedge(c):diffusebottomedge(c)
+		:diffuseleftedge(c):diffuserightedge(c)
+		:diffusealpha(1):strokecolor(c):glow(color("#00000000"))
+		:shadowlength(0):blend("BlendMode_Normal")
+end
+
 function GetSongLengthColor(t)
 	if t < PREFSMAN:GetPreference("LongVerSongSeconds") then
 		return COLOR.TextMain

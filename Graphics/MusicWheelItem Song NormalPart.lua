@@ -173,7 +173,6 @@ t[#t+1] = Def.Sprite {
 	end
 }
 
-
 t[#t+1] = LoadFont("Common Normal") .. {
 	InitCommand = function(self)
 		self:xy(500-5,-22+10)

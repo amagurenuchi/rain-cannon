@@ -42,6 +42,33 @@ local t = Def.ActorFrame{
 t[#t+1] = LoadActor("../_mouse.lua", "ScreenEvaluation")
 t[#t+1] = StandardDecorationFromFileOptional("Header","Header")
 
+-- Player profile bar
+local profile = PROFILEMAN:GetProfile(PLAYER_1)
+local function ProfileValue(method, fallback)
+	if profile and profile[method] then
+		local ok, value = pcall(function() return profile[method](profile) end)
+		if ok and value ~= nil then return value end
+	end
+	return fallback
+end
+
+t[#t+1] = Def.Quad{
+	OnCommand = function(self)
+		self:xy(SCREEN_WIDTH - 145, 60):zoomto(250, 50):diffuse(COLOR.MainHighlight)
+	end,
+}
+
+t[#t+1] = LoadActor(THEME:GetPathG("", "Profilebar"), {
+	AvatarPath = ProfileValue("GetAvatarPath", ""),
+	ProfileName = ProfileValue("GetDisplayName", ProfileValue("GetName", "PLAYER 1")),
+	Rating = ProfileValue("GetPlayerRating", 0),
+	Rank = ProfileValue("GetRank", 0),
+})..{
+	OnCommand = function(self)
+		self:xy(SCREEN_WIDTH - 150, 55)
+	end,
+}
+
 -- Top Song Info Card
 local cardW = 880
 local cardH = 110

@@ -11,6 +11,9 @@ for level, name in ipairs(ClearType) do ClearTypeLevel[name] = level end
 function getClearTypeLevel(name) return ClearTypeLevel[name] or 18 end
 function getClearTypeText(name) return THEME:GetString("ClearTypes", name) end
 function getClearTypeShortText(name)
+	-- Some score objects can produce an unknown clear level while the song
+	-- screen is updating. Never pass nil to THEME:HasString/GetString.
+	name = name or "ClearType_None"
 	return THEME:HasString("ClearTypesShort", name) and THEME:GetString("ClearTypesShort", name) or getClearTypeText(name)
 end
 function getClearTypeColor(name) return GetClearTypeColor(name) end
