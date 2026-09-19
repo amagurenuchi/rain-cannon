@@ -39,7 +39,7 @@ local t = Def.ActorFrame{
 	end
 }
 
-t[#t+1] = LoadActor("../_mouse.lua", "ScreenEvaluation")
+t[#t+1] = LoadActor("../_cursor.lua", "ScreenEvaluation")
 t[#t+1] = StandardDecorationFromFileOptional("Header","Header")
 
 -- Player profile bar
@@ -59,7 +59,7 @@ t[#t+1] = Def.Quad{
 }
 
 t[#t+1] = LoadActor(THEME:GetPathG("", "Profilebar"), {
-	AvatarPath = ProfileValue("GetAvatarPath", ""),
+	AvatarPath = getAvatarPath(PLAYER_1),
 	ProfileName = ProfileValue("GetDisplayName", ProfileValue("GetName", "PLAYER 1")),
 	Rating = ProfileValue("GetPlayerRating", 0),
 	Rank = ProfileValue("GetRank", 0),

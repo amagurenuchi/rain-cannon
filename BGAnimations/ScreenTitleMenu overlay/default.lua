@@ -83,7 +83,7 @@ end
 
 -- Version/theme details and network state sit in the two bottom corners.
 t[#t+1] = LoadFont("Common Normal")..{
-	Text = string.format("Etterna %s\nRain Cannon %s", productVersion(), themeVersion),
+	Text = string.format("Etterna %s\nWillow Heart %s", productVersion(), themeVersion),
 	InitCommand = function(self) self:xy(18, SCREEN_HEIGHT - 30):halign(0):valign(1):zoom(0.48):diffuse(COLOR.TextSub2) end
 }
 t[#t+1] = LoadFont("Common Normal")..{

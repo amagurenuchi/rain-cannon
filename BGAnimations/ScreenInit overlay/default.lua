@@ -24,7 +24,7 @@ local t = Def.ActorFrame{
 	OnCommand = function(self)
 		local screen = SCREENMAN:GetTopScreen()
 		if screen then
-			self:AddChild(LoadActor("../_mouse.lua", "ScreenInit"))
+			self:AddChild(LoadActor("../_cursor.lua", "ScreenInit"))
 			screen:AddInputCallback(InputHandler)
 		end
 		-- Explicit Lua timer to guarantee screen auto-transitions after 2.5 seconds
@@ -49,9 +49,9 @@ t[#t+1] = Def.Quad{
 	end
 }
 
--- Title Text "RAIN CANNON"
+-- Title Text
 t[#t+1] = LoadFont("DFPGothic 64px")..{
-	Text = "RAIN CANNON",
+	Text = "WILLOW HEART",
 	InitCommand = function(self)
 		self:xy(SCREEN_CENTER_X, logoY)
 		self:diffuse(COLOR.TextMain)

@@ -1,14 +1,9 @@
+
 return Def.ActorFrame{
 	OnCommand = function(self)
-		if _G.willowHeartStageInformationShown then
-			_G.willowHeartStageInformationShown = false
-			return
-		end
-
 		local screen = SCREENMAN:GetTopScreen()
 		if screen then
 			screen:SetNextScreenName("ScreenStageInformation")
-			screen:StartTransitioningScreen("SM_GoToNextScreen")
 		end
 	end,
 }

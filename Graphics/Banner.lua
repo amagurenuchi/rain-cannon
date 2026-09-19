@@ -220,25 +220,4 @@ t[#t+1] = Def.Quad{
 	RateUpdateCommand = function(self) self:playcommand("Update") end
 }
 
--- Rate text
-t[#t+1] = LoadFont("Common Normal") .. {
-	Name="CurRate",
-	InitCommand = function(self)
-		self:xy(Values.BannerWidth/2-5,Values.BannerHeight/2-10)
-		self:halign(1)
-		self:zoom(0.45)
-		self:diffuse(COLOR.TextMainLight)
-	end,
-	UpdateCommand = function(self)
-		if Values.Rate ~= 1 then
-			self:settextf("%0.2fx Rate",Values.Rate)
-		else
-			self:settext("")
-		end
-	end,
-	RateUpdateCommand = function(self) self:playcommand("Update") end
-}
-
-
-
 return t

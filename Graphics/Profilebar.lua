@@ -47,7 +47,7 @@ t[#t+1] = UIElements.Border(Values.FrameWidth,Values.FrameHeight,Values.BorderSi
 t[#t+1] = UIElements.QuadButton(Values.ButtonZ)..{
 	UpdateCommand = function(self)
 		self:zoomto(Values.FrameWidth,Values.FrameHeight)
-		self:diffuse(COLOR.MainBackground):diffusealpha(0.9)
+		self:diffuse(COLOR.MainBackground):diffusealpha(1)
 		self:z(Values.ButtonZ)
 	end
 }
@@ -58,7 +58,7 @@ t[#t+1] = Def.Sprite {
 	UpdateCommand = function(self)
 		self:x(-Values.FrameWidth/2)
 		self:halign(0)
-		self:Load(Values.AvatarPath)
+		self:Load(Values.AvatarPath ~= "" and Values.AvatarPath or getAvatarPath(PLAYER_1))
 		self:zoomto(Values.FrameHeight,Values.FrameHeight)
 	end
 }

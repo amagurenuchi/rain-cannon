@@ -57,41 +57,8 @@ function GetClearTypeColor(clearType)
 end
 
 
-if not getClearType then
-	function getClearType(pn, steps, score)
-		if not score then return "ClearType_Noplay" end
-		if score:GetWifeGrade() == "Grade_Failed" then return "ClearType_Failed" end
-		if score.FullComboOfScore and score:FullComboOfScore("TapNoteScore_W1") then return "ClearType_MFC" end
-		if score.FullComboOfScore and score:FullComboOfScore("TapNoteScore_W2") then return "ClearType_PFC" end
-		if score.FullComboOfScore and score:FullComboOfScore("TapNoteScore_W3") then return "ClearType_FC" end
-		return "ClearType_Clear"
-	end
-	function getClearTypeShortText(name)
-		local short = { ClearType_MFC="Marv F-Combo", ClearType_PFC="Perf F-Combo", ClearType_FC="F-Combo", ClearType_Failed="Failed", ClearType_Noplay="No Play" }
-		return short[name] or tostring(name):gsub("ClearType_", "")
-	end
-	function getClearTypeText(name) return getClearTypeShortText(name) end
-	function getClearTypeColor(name) return GetClearTypeColor(name) end
-end
-
-
-if not GetGradeString then
-	local labels = GRADE_LABELS or {
-		Grade_Tier01 = "AAAAA", Grade_Tier02 = "AAAA:", Grade_Tier03 = "AAAA.", Grade_Tier04 = "AAAA",
-		Grade_Tier05 = "AAA:", Grade_Tier06 = "AAA.", Grade_Tier07 = "AAA",
-		Grade_Tier08 = "AA:", Grade_Tier09 = "AA.", Grade_Tier10 = "AA",
-		Grade_Tier11 = "A:", Grade_Tier12 = "A.", Grade_Tier13 = "A",
-		Grade_Tier14 = "B", Grade_Tier15 = "C", Grade_Tier16 = "D",
-		Grade_Failed = "F", Grade_None = "--",
-	}
-	function GetGradeString(grade)
-		if not grade then return "N/A" end
-		return labels[tostring(grade)] or "CLEARED"
-	end
-end
-
 function GetRatingColor(rating)
-	return HSV(((198 - math.floor(rating,40)*(324/40))%360), 0.5, 0.75)
+	return HSV(((198 - math.min(rating,40)*(324/40))%360), 0.5, 0.75)
 end
 
 function GetSongMSDColor(song)

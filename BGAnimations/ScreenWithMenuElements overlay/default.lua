@@ -7,7 +7,7 @@ local t = Def.ActorFrame{
 	OnCommand = function(self)
 		screen = SCREENMAN:GetTopScreen()
 		if screen then
-			self:AddChild(LoadActor("../_mouse.lua", screen:GetName()))
+			self:AddChild(LoadActor("../_cursor.lua", screen:GetName()))
 		end
 	end
 }
