@@ -52,7 +52,7 @@ t[#t+1] = Def.Actor{
 	end,
 }
 
-t[#t+1] = LoadActor("../_cursor.lua", "ScreenSelectMusic")
+t[#t+1] = LoadActor("../_mouse.lua", "ScreenSelectMusic")
 
 -- Player profile bar
 local profile = PROFILEMAN:GetProfile(PLAYER_1)

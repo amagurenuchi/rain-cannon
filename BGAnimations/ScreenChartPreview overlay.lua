@@ -221,7 +221,7 @@ t[#t+1] = StandardDecorationFromFileOptional("Header","Header")..{
 		self:playcommand("UpdateScreenHeader", {Header = "Chart Preview"})
 	end
 }
-t[#t+1] = LoadActor("_cursor.lua", "ScreenChartPreview")
+t[#t+1] = LoadActor("_mouse.lua", "ScreenChartPreview")
 
 
 -- Top Right Song & Chart Info Card (No Pack Name, No Step Type/Meter Badge)

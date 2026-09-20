@@ -24,7 +24,6 @@ local t = Def.ActorFrame{
 	OnCommand = function(self)
 		local screen = SCREENMAN:GetTopScreen()
 		if screen then
-			self:AddChild(LoadActor("../_cursor.lua", "ScreenInit"))
 			screen:AddInputCallback(InputHandler)
 		end
 		-- Explicit Lua timer to guarantee screen auto-transitions after 2.5 seconds
@@ -34,6 +33,7 @@ local t = Def.ActorFrame{
 		GoNext()
 	end
 }
+
 
 -- Central Logo / Theme Branding
 local logoY = SCREEN_CENTER_Y - 30

@@ -39,7 +39,6 @@ local t = Def.ActorFrame{
 	end
 }
 
-t[#t+1] = LoadActor("../_cursor.lua", "ScreenEvaluation")
 t[#t+1] = StandardDecorationFromFileOptional("Header","Header")
 
 -- Player profile bar

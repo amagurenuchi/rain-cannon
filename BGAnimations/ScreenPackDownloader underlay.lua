@@ -11,17 +11,48 @@ end
 -- child contract expected below.
 if not UIElements.TextButton then
 	UIElements.TextButton = function(z, depth, font)
-		return Def.ActorFrame {
-			Def.Quad { Name = "BG" },
-			LoadFont(font or "Common Normal") .. { Name = "Text" }
-		}
+			local button = Def.ActorFrame {
+				UIElements.QuadButton(z, depth) .. {
+					Name = "MouseButton",
+					InitCommand = function(self)
+						self:zoomto(320, 64):diffusealpha(0)
+					end,
+					MouseOverCommand = function(self)
+						self:GetParent():playcommand("MouseOver")
+					end,
+					MouseOutCommand = function(self)
+						self:GetParent():playcommand("MouseOut")
+					end,
+					MouseDownCommand = function(self, params)
+						self:GetParent():playcommand("MouseDown", params)
+					end,
+					MouseUpCommand = function(self, params)
+						self:GetParent():playcommand("MouseUp", params)
+					end,
+					MouseClickCommand = function(self, params)
+						self:GetParent():playcommand("MouseClick", params)
+					end,
+				}
+			}
+			button[#button + 1] = Def.Quad { Name = "BG" }
+			button[#button + 1] = LoadFont(font or "Common Normal") .. { Name = "Text" }
+			return button
 	end
 end
 if not UIElements.TextToolTip then
 	UIElements.TextToolTip = function(z, depth, font)
-		return LoadFont(font or "Common Normal") .. {
-			InitCommand = function(self) self:z(z) end
+		local tooltip = Def.ActorFrame {}
+		tooltip[#tooltip + 1] = UIElements.QuadButton(z, depth) .. {
+			Name = "MouseButton",
+			InitCommand = function(self) self:zoomto(320, 64):diffusealpha(0) end,
+			MouseOverCommand = function(self) self:GetParent():playcommand("MouseOver") end,
+			MouseOutCommand = function(self) self:GetParent():playcommand("MouseOut") end,
+			MouseClickCommand = function(self, params) self:GetParent():playcommand("MouseClick", params) end,
 		}
+		tooltip[#tooltip + 1] = LoadFont(font or "Common Normal") .. {
+			InitCommand = function(self) self:z(z) end,
+		}
+		return tooltip
 	end
 end
 
