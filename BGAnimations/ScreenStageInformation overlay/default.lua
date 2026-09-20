@@ -5,7 +5,7 @@ local steps = GAMESTATE:GetCurrentSteps(PLAYER_1)
 
 local function DifficultyName()
 	if not steps then return "" end
-	return string.upper(ToEnumShortString(steps:GetDifficulty()))
+	return GetDifficultyName(steps:GetDifficulty())
 end
 
 local function StepsMSD()

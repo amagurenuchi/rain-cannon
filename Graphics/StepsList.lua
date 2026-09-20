@@ -12,9 +12,9 @@ end
 local function DifficultyName(diff)
 	local names = {
 		Beginner = "BEGINNER", Easy = "EASY", Medium = "NORMAL",
-		Hard = "HARD", Challenge = "EXPERT", Edit = "EDIT"
+		Hard = "HARD", Challenge = "INSANE", Edit = "EDIT"
 	}
-	local key = ToEnumShortString(diff)
+	local key = diff and ToEnumShortString(diff) or ""
 	return names[key] or string.upper(key)
 end
 

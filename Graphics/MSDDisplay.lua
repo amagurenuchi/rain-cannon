@@ -27,7 +27,7 @@ local function GetDifficultyName(diff)
 	elseif str == "Easy" then return "EASY"
 	elseif str == "Medium" then return "NORMAL"
 	elseif str == "Hard" then return "HARD"
-	elseif str == "Challenge" then return "EXPERT"
+	elseif str == "Challenge" then return "INSANE"
 	elseif str == "Edit" then return "EDIT"
 	else return string.upper(str) end
 end

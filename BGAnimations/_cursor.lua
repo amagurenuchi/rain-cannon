@@ -1,12 +1,32 @@
--- Custom mouse cursor rendering, adapted from the sibling themes.
--- This file owns exactly one persistent pointer: the diamond below.
+-- Mouse controller and pointer.
+-- This actor must be loaded by a screen overlay so its input callback is
+-- attached to the screen that owns the registered QuadButtons.
 
+local screenName = Var("LoadingScreen") or ...
 local maxRipples = 20
 local rippleIndex = 0
-local screenName = Var("LoadingScreen") or ...
+
 BUTTON:ResetButtonTable(screenName)
 
-local function cursorRipple(index)
+local function updateMouse(frame)
+    local x = INPUTFILTER:GetMouseX()
+    local y = INPUTFILTER:GetMouseY()
+
+    -- TOOLTIP is also the canonical pointer owner in the fallback theme.
+    -- Keep its tooltip actor positioned independently of the pointer graphic.
+    if TOOLTIP and TOOLTIP.Actor then
+        TOOLTIP:SetPosition(x, y)
+    end
+
+    BUTTON:UpdateMouseState()
+    local pointer = frame:GetChild("CursorPointer")
+    if pointer then
+        pointer:xy(x, y)
+    end
+    return false
+end
+
+local function ripple(index)
     return LoadActor(THEME:GetPathG("", "_circle (doubleres)")) .. {
         Name = "CursorRipple" .. index,
         InitCommand = function(self)
@@ -34,20 +54,8 @@ local t = Def.ActorFrame{
         if topScreen then
             topScreen:AddInputCallback(BUTTON.InputCallback)
         end
-        self:SetUpdateFunction(function(frame)
-            BUTTON:UpdateMouseState()
-            -- Use the fallback tooltip pointer, enlarged for visibility.
-            if TOOLTIP and TOOLTIP.Pointer then
-                TOOLTIP.Pointer
-                    :xy(INPUTFILTER:GetMouseX(), INPUTFILTER:GetMouseY())
-                    :zoomto(10, 10)
-                    :rotationz(45)
-                    :visible(true)
-            end
-            frame:GetChild("CursorPointer")
-                :xy(INPUTFILTER:GetMouseX(), INPUTFILTER:GetMouseY())
-            return false
-        end)
+
+        self:SetUpdateFunction(updateMouse)
         local refreshRate = DISPLAY:GetDisplayRefreshRate()
         if refreshRate and refreshRate > 0 then
             self:SetUpdateFunctionInterval(1 / refreshRate)
@@ -56,19 +64,23 @@ local t = Def.ActorFrame{
     OffCommand = function(self)
         self:SetUpdateFunction(nil)
         BUTTON:ResetButtonTable(screenName)
+        if TOOLTIP and TOOLTIP.Actor then
+            TOOLTIP:Hide()
+        end
+    end,
+    CancelCommand = function(self)
+        self:playcommand("Off")
     end,
 }
 
 for index = 0, maxRipples do
-    t[#t + 1] = cursorRipple(index)
+    t[#t + 1] = ripple(index)
 end
 
 t[#t + 1] = Def.Quad{
     Name = "CursorPointer",
     InitCommand = function(self)
-        self:zoomto(6, 6)
-            :rotationz(45)
-            :diffuse(color("0,0,0,1"))
+        self:zoomto(6, 6):rotationz(45):diffuse(color("0,0,0,1"))
     end,
     MouseLeftClickMessageCommand = function()
         rippleIndex = (rippleIndex + 1) % maxRipples

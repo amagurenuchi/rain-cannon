@@ -16,7 +16,7 @@ local function GetDifficultyName(diff)
 	elseif str == "Easy" then return "EASY"
 	elseif str == "Medium" then return "NORMAL"
 	elseif str == "Hard" then return "HARD"
-	elseif str == "Challenge" then return "EXPERT"
+	elseif str == "Challenge" then return "INSANE"
 	elseif str == "Edit" then return "EDIT"
 	else return string.upper(str) end
 end
@@ -183,7 +183,7 @@ t[#t+1] = Def.ActorFrame{
 			if steps then
 				self:settextf("%s %d", GetDifficultyName(steps:GetDifficulty()), steps:GetMeter())
 			else
-				self:settext("EXPERT 15")
+				self:settext("INSANE 15")
 			end
 		end
 	},

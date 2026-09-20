@@ -78,8 +78,10 @@ local t = Def.ActorFrame{
 		SOUND:StopMusic()
 	end,
 	CurrentRateChangedMessageCommand = function(self, params)
-		amountOfWait = amountOfWait / (1 / params.oldRate) / params.rate -- fun math, this works.
-		self:SetUpdateFunctionInterval(amountOfWait)
+		if params and params.oldRate and params.rate and params.oldRate > 0 and params.rate > 0 then
+			amountOfWait = amountOfWait / (1 / params.oldRate) / params.rate -- fun math, this works.
+			self:SetUpdateFunctionInterval(amountOfWait)
+		end
 	end,
 	PreviewNoteFieldDeletedMessageCommand = function(self)
 		sampleEvent = true

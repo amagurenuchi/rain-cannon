@@ -15,6 +15,18 @@ function GetGradeString(grade)
 	return GRADE_LABELS[tostring(grade)] or "CLEARED"
 end
 
+function GetDifficultyName(diff)
+	if not diff then return "NORMAL" end
+	local str = ToEnumShortString(diff)
+	if str == "Beginner" then return "BEGINNER"
+	elseif str == "Easy" then return "EASY"
+	elseif str == "Medium" then return "NORMAL"
+	elseif str == "Hard" then return "HARD"
+	elseif str == "Challenge" then return "INSANE"
+	elseif str == "Edit" then return "EDIT"
+	else return string.upper(str) end
+end
+
 function Actor.PlayCommandsOnChildren(self, cmd, params)
     return self:RunCommandsOnChildren(function(self) self:playcommand(cmd, params) end)
 end
