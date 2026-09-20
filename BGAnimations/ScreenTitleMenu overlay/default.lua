@@ -95,4 +95,6 @@ t[#t+1] = LoadFont("Common Normal")..{
 	end
 }
 
+t[#t+1] = LoadActor("../_mouse.lua", "ScreenTitleMenu")
+
 return t

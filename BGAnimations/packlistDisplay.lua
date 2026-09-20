@@ -364,6 +364,7 @@ local function makePackDisplay(i)
 				self:diffusealpha(1)
 			end,
 			MouseDownCommand = function(self, params)
+				if not packinfo then return end
 				if params.event == "DeviceButton_left mouse button" then
 					DLMAN:ShowPackPage(packinfo:GetID())
 				end
@@ -451,6 +452,7 @@ local function makePackDisplay(i)
 				end
 			end,
 			MouseOverCommand = function(self)
+				if not packinfo then return end
 				local bg = self:GetParent():GetChild("DownloadButtonBG")
 				if bg and not installed then
 					bg:diffusealpha(1.0)
@@ -470,6 +472,7 @@ local function makePackDisplay(i)
 				TOOLTIP:Hide()
 			end,
 			MouseDownCommand = function(self, params)
+				if not packinfo then return end
 				if params.event == "DeviceButton_left mouse button" then
 					if packinfo:GetSize() > 2000000000 then
 						packinfo:DownloadExternally()

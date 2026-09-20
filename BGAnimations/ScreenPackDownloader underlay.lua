@@ -17,20 +17,36 @@ if not UIElements.TextButton then
 					InitCommand = function(self)
 						self:zoomto(320, 64):diffusealpha(0)
 					end,
+					OnCommand = function(self)
+						local bg = self:GetParent():GetChild("BG")
+						if bg then
+							self:halign(0):valign(0)
+							self:zoomto(bg:GetZoomedWidth(), bg:GetZoomedHeight())
+						end
+					end,
 					MouseOverCommand = function(self)
-						self:GetParent():playcommand("MouseOver")
+						self:GetParent():playcommand("RolloverUpdate", {update = "over"})
 					end,
 					MouseOutCommand = function(self)
-						self:GetParent():playcommand("MouseOut")
+						self:GetParent():playcommand("RolloverUpdate", {update = "out"})
 					end,
 					MouseDownCommand = function(self, params)
-						self:GetParent():playcommand("MouseDown", params)
+						self:GetParent():playcommand("Click", {
+							update = "OnMouseDown",
+							event = params and params.event,
+						})
 					end,
 					MouseUpCommand = function(self, params)
-						self:GetParent():playcommand("MouseUp", params)
+						self:GetParent():playcommand("Click", {
+							update = "OnMouseUp",
+							event = params and params.event,
+						})
 					end,
 					MouseClickCommand = function(self, params)
-						self:GetParent():playcommand("MouseClick", params)
+						self:GetParent():playcommand("Click", {
+							update = "OnMouseClicked",
+							event = params and params.event,
+						})
 					end,
 				}
 			}
@@ -41,18 +57,17 @@ if not UIElements.TextButton then
 end
 if not UIElements.TextToolTip then
 	UIElements.TextToolTip = function(z, depth, font)
-		local tooltip = Def.ActorFrame {}
-		tooltip[#tooltip + 1] = UIElements.QuadButton(z, depth) .. {
-			Name = "MouseButton",
-			InitCommand = function(self) self:zoomto(320, 64):diffusealpha(0) end,
-			MouseOverCommand = function(self) self:GetParent():playcommand("MouseOver") end,
-			MouseOutCommand = function(self) self:GetParent():playcommand("MouseOut") end,
-			MouseClickCommand = function(self, params) self:GetParent():playcommand("MouseClick", params) end,
+		return LoadFont(font or "Common Normal") .. {
+			InitCommand = function(self) 
+				if z then self:z(z) end
+			end,
+			OnCommand = function(self)
+				local screen = SCREENMAN:GetTopScreen()
+				if screen ~= nil then
+					BUTTON:AddButton(self, screen:GetName(), depth or 0)
+				end
+			end,
 		}
-		tooltip[#tooltip + 1] = LoadFont(font or "Common Normal") .. {
-			InitCommand = function(self) self:z(z) end,
-		}
-		return tooltip
 	end
 end
 
@@ -675,5 +690,6 @@ o[#o + 1] = Def.ActorFrame {
 }
 
 o[#o + 1] = LoadActor("packlistDisplay")
+o[#o + 1] = LoadActor("_mouse.lua", "ScreenPackDownloader")
 
 return o

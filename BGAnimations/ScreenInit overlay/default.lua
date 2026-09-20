@@ -137,4 +137,6 @@ t[#t+1] = UIElements.QuadButton(1, 1)..{
 	end
 }
 
+t[#t+1] = LoadActor("../_mouse.lua", "ScreenInit")
+
 return t

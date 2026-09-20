@@ -49,6 +49,30 @@ function UIElements.QuadButton(z, depth)
 	return t
 end
 
+-- Clickable text element implementation with font actors
+function UIElements.TextToolTip(z, depth, font)
+	local t = LoadFont(font or "Common Normal") .. {
+		InitCommand = function(self) 
+			if z then self:z(z) end
+		end,
+		OnCommand = function(self)
+			local screen = SCREENMAN:GetTopScreen()
+			if screen ~= nil then
+				BUTTON:AddButton(self, screen:GetName(), depth or 0)
+			end
+		end,
+		MouseOverCommand = function(self) end,
+		MouseOutCommand = function(self) end,
+		MouseUpCommand = function(self, params) end,
+		MouseDownCommand = function(self, params) end,
+		MouseClickCommand = function(self, params) end,
+		MouseReleaseCommand = function(self, params) end,
+		MouseDragCommand = function(self, params) end,
+		MouseHoldCommand = function(self, params) end,
+	}
+	return t
+end
+
 -- Basic clickable button implementation with quads
 function ButtonDemo(z)
 

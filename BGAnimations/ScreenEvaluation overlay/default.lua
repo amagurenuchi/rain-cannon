@@ -518,4 +518,6 @@ t[#t+1] = Def.ActorFrame{
 	}
 }
 
+t[#t+1] = LoadActor("../_mouse.lua", "ScreenEvaluation")
+
 return t

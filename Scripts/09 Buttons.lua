@@ -308,6 +308,11 @@ function BUTTON.UpdateMouseState(self)
 	end
 
 	if self.ButtonTable[topScreen:GetName()] == nil then
+		if self.CurTopButton ~= nil then
+			self:OnMouseOut(self.CurTopButton, self.CurTopButtonDepth)
+			self.CurTopButton = nil
+			self.CurTopButtonDepth = 0
+		end
 		return
 	end
 
@@ -431,7 +436,10 @@ function BUTTON.GetTopButton(self, x, y)
 	end
 
 	for i,v in ipairs(self.ButtonTable[topScreen:GetName()]) do
-		local ok, over = pcall(function() return v:IsOver(x, y) end)
+		local ok, over = pcall(function()
+			if not v:IsVisible() then return false end
+			return v:IsOver(x, y)
+		end)
 		if ok and over then
 			local z = v:GetZ()
 			if z >= topZ then
